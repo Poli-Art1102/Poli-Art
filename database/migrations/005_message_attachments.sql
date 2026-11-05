@@ -1,0 +1,7 @@
+USE poliart;
+
+ALTER TABLE mensaje
+    ADD COLUMN ruta_adjunto VARCHAR(255) DEFAULT NULL,
+    ADD COLUMN nombre_adjunto VARCHAR(255) DEFAULT NULL,
+    ADD COLUMN tipo_adjunto VARCHAR(100) DEFAULT NULL,
+    ADD COLUMN tamano_adjunto INT UNSIGNED DEFAULT NULL;

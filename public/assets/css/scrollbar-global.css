@@ -1,0 +1,71 @@
+/* Barra de desplazamiento global con el mismo diseño del área de artista. */
+:root,
+html.dark {
+    --scrollbar-track: #8d2d0d;
+    --scrollbar-thumb: #b84f25;
+    --scrollbar-thumb-hover: #d26735;
+    --scrollbar-button: #9f3714;
+}
+
+html.light {
+    --scrollbar-track: #f5c7b8;
+    --scrollbar-thumb: #ed7745;
+    --scrollbar-thumb-hover: #d45f2e;
+    --scrollbar-button: #f2c4b3;
+}
+
+html {
+    scrollbar-width: auto;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+*,
+*::before,
+*::after {
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+*::-webkit-scrollbar {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scrollbar-track) !important;
+}
+
+*::-webkit-scrollbar-thumb {
+    min-height: 40px;
+    border: 3px solid var(--scrollbar-track) !important;
+    border-radius: 8px;
+    background: var(--scrollbar-thumb) !important;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover) !important;
+}
+
+*::-webkit-scrollbar-button {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: var(--scrollbar-button);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+*::-webkit-scrollbar-button:vertical:start {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23d98255' d='M5 2 0 8h10z'/%3E%3C/svg%3E");
+}
+
+*::-webkit-scrollbar-button:vertical:end {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23d98255' d='m0 2 10 0-5 6z'/%3E%3C/svg%3E");
+}
+
+html.light *::-webkit-scrollbar-button:vertical:start {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%237a4b3a' d='M5 2 0 8h10z'/%3E%3C/svg%3E");
+}
+
+html.light *::-webkit-scrollbar-button:vertical:end {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%237a4b3a' d='m0 2 10 0-5 6z'/%3E%3C/svg%3E");
+}

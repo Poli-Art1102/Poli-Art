@@ -1,0 +1,147 @@
+/**
+ * includes/css/botones.css
+ * Sistema unificado de botones para Poli-Art
+ * Estilo: glass/translúcido — fondo tenue + borde semiopaco + texto de color
+ */
+
+/* ── Base compartida ─────────────────────────────────────── */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .45rem;
+    padding: .5rem 1rem;
+    border-radius: .6rem;
+    border: 1px solid transparent;
+    font-family: inherit;
+    font-size: .875rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        background-color .2s ease,
+        border-color     .2s ease,
+        color            .2s ease,
+        transform        .15s ease,
+        opacity          .2s ease;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.btn:active          { transform: scale(.97); }
+.btn:disabled,
+.btn[disabled]       { opacity: .5; cursor: not-allowed; transform: none !important; }
+.btn:focus-visible   { outline: 3px solid rgba(237,119,69,.45); outline-offset: 3px; }
+
+/* ── Naranja — acción principal ──────────────────────────── */
+.btn-primary {
+    background: linear-gradient(135deg, var(--brand-orange, #ED7745), #d45f2e);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(237,119,69,.35);
+}
+.btn-primary:hover:not(:disabled) {
+    opacity: .9;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(237,119,69,.45);
+}
+
+/* ── Naranja outline ─────────────────────────────────────── */
+.btn-outline {
+    background: rgba(237,119,69,.1);
+    border-color: rgba(237,119,69,.4);
+    color: var(--brand-orange, #ED7745);
+}
+.btn-outline:hover:not(:disabled) {
+    background: rgba(237,119,69,.2);
+    border-color: rgba(237,119,69,.7);
+}
+
+/* ── Verde — carrito / confirmar ─────────────────────────── */
+.btn-green {
+    background: rgba(34,197,94,.12);
+    border-color: rgba(34,197,94,.38);
+    color: #22c55e;
+}
+.btn-green:hover:not(:disabled) {
+    background: rgba(34,197,94,.22);
+    border-color: rgba(34,197,94,.65);
+}
+
+/* ── Rosa/rojo — me gusta / eliminar ─────────────────────── */
+.btn-rose {
+    background: rgba(244,63,94,.12);
+    border-color: rgba(244,63,94,.38);
+    color: #fb7185;
+}
+.btn-rose:hover:not(:disabled) {
+    background: rgba(244,63,94,.22);
+    border-color: rgba(244,63,94,.65);
+}
+.btn-rose[aria-pressed="true"] {
+    background: rgba(244,63,94,.2);
+    border-color: rgba(244,63,94,.58);
+}
+
+/* ── Azul cielo — ver detalles / info ────────────────────── */
+.btn-sky {
+    background: rgba(56,189,248,.12);
+    border-color: rgba(56,189,248,.38);
+    color: #38bdf8;
+}
+.btn-sky:hover:not(:disabled) {
+    background: rgba(56,189,248,.22);
+    border-color: rgba(56,189,248,.65);
+}
+
+/* ── Rojo — peligro / reportar / suspender ───────────────── */
+.btn-danger {
+    background: rgba(239,68,68,.12);
+    border-color: rgba(239,68,68,.35);
+    color: #ef4444;
+}
+.btn-danger:hover:not(:disabled) {
+    background: rgba(239,68,68,.22);
+    border-color: rgba(239,68,68,.65);
+}
+
+/* ── Neutro gris — cancelar / secundario ─────────────────── */
+.btn-neutral {
+    background: var(--hover-item, rgba(148,163,184,.1));
+    border-color: var(--border-subtle, rgba(148,163,184,.3));
+    color: var(--text-muted, #7A4B3A);
+}
+.btn-neutral:hover:not(:disabled) {
+    border-color: var(--brand-orange, #ED7745);
+    color: var(--text-main);
+}
+
+/* ── Púrpura — colaboraciones ────────────────────────────── */
+.btn-purple {
+    background: rgba(197,115,255,.12);
+    border-color: rgba(197,115,255,.38);
+    color: #c573ff;
+}
+.btn-purple:hover:not(:disabled) {
+    background: rgba(197,115,255,.22);
+    border-color: rgba(197,115,255,.65);
+}
+
+/* ── Tamaños ──────────────────────────────────────────────── */
+.btn-sm {
+    padding: .35rem .7rem;
+    font-size: .78rem;
+    border-radius: .5rem;
+    gap: .35rem;
+}
+.btn-lg {
+    padding: .75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: .75rem;
+    gap: .6rem;
+}
+.btn-full {
+    width: 100%;
+}

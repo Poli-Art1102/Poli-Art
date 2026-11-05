@@ -1,0 +1,240 @@
+/* Apariencia unificada de los botones de Poli-Art. */
+.global-back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    padding: .45rem .75rem;
+    border: 1px solid var(--brand-orange, #ed7745) !important;
+    border-radius: .65rem !important;
+    background: rgba(237, 119, 69, .16) !important;
+    color: #ffd0bd !important;
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 800;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color .2s ease, color .2s ease, transform .2s ease;
+}
+.global-back-button:hover { background: rgba(237, 119, 69, .3) !important; border-color: #ffb08f !important; color: #fff1eb !important; transform: translateY(-1px); }
+.global-back-button:focus-visible { outline: 3px solid rgba(22,189,232,.4) !important; outline-offset: 3px; }
+.global-back-row { width: 100%; min-height: 2.5rem; flex: 0 0 2.5rem; padding: .55rem 2rem 0; box-sizing: border-box; }
+@media (max-width: 640px) { .global-back-button { padding: .4rem .55rem; font-size: .76rem; } .global-back-button .back-label { display: none; } }
+.btn,
+button:not(.sidebar-link),
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    border-radius: .85rem !important;
+    box-shadow: none !important;
+}
+
+.btn {
+    background: var(--hover-item) !important;
+    border: 1px solid var(--border-subtle) !important;
+    color: var(--text-main, #fff1eb) !important;
+}
+
+.btn:focus-visible,
+button:not(.sidebar-link):focus-visible,
+input[type="button"]:focus-visible,
+input[type="submit"]:focus-visible,
+input[type="reset"]:focus-visible {
+    outline: 3px solid rgba(22, 189, 232, .4) !important;
+    outline-offset: 3px;
+}
+
+/* Cada acción conserva su color, pero comparte el acabado visual. */
+.btn-primary,
+.btn-outline,
+.btn-green,
+.btn-rose,
+.btn-sky,
+.btn-danger,
+.btn-neutral,
+.btn-purple,
+.client-feed-action,
+.client-like-action,
+.btn-like,
+.btn-carrito,
+.btn-follow,
+.btn-chat-artist {
+    box-shadow: none !important;
+}
+
+.btn-primary { background: rgba(237, 119, 69, .18) !important; border-color: rgba(237, 119, 69, .6) !important; color: #ff9d73 !important; }
+.btn-outline { background: rgba(237, 119, 69, .12) !important; border-color: rgba(237, 119, 69, .5) !important; color: #ff9d73 !important; }
+.btn-green { background: rgba(34, 197, 94, .14) !important; border-color: rgba(34, 197, 94, .55) !important; color: #4ade80 !important; }
+.btn-rose { background: rgba(244, 63, 94, .14) !important; border-color: rgba(244, 63, 94, .55) !important; color: #fb7185 !important; }
+.btn-sky { background: rgba(56, 189, 248, .14) !important; border-color: rgba(56, 189, 248, .55) !important; color: #38bdf8 !important; }
+.btn-danger { background: rgba(239, 68, 68, .14) !important; border-color: rgba(239, 68, 68, .55) !important; color: #f87171 !important; }
+.btn-neutral { background: var(--hover-item) !important; border-color: var(--border-subtle) !important; color: var(--text-main) !important; }
+.btn-purple { background: rgba(197, 115, 255, .14) !important; border-color: rgba(197, 115, 255, .55) !important; color: #d799ff !important; }
+.btn-chat-artist { background: rgba(237, 119, 69, .18) !important; border: 1px solid rgba(237, 119, 69, .6) !important; color: #ff9d73 !important; border-radius: .85rem !important; box-shadow: none !important; }
+.btn-chat-artist:hover { background: rgba(237, 119, 69, .28) !important; border-color: #ff9d73 !important; color: #ffc0a6 !important; transform: translateY(-1px); }
+.contact-artist-action { background: rgba(56, 189, 248, .14) !important; border: 1px solid rgba(56, 189, 248, .55) !important; color: #38bdf8 !important; border-radius: .85rem !important; box-shadow: none !important; }
+.contact-artist-action:hover { background: rgba(56, 189, 248, .24) !important; border-color: #38bdf8 !important; color: #7dd3fc !important; transform: translateY(-1px); }
+.btn-message-artist { background: rgba(237, 119, 69, .18) !important; border: 1px solid rgba(237, 119, 69, .65) !important; border-radius: .85rem !important; color: #ff9d73 !important; box-shadow: none !important; }
+.btn-message-artist:hover { background: rgba(237, 119, 69, .3) !important; border-color: #ff9d73 !important; color: #ffc0a6 !important; transform: translateY(-1px); }
+.btn-following-pill { background: rgba(34, 197, 94, .14) !important; border: 1px solid rgba(34, 197, 94, .6) !important; border-radius: .85rem !important; color: #4ade80 !important; box-shadow: none !important; }
+.btn-follow-artist { background: rgba(56, 189, 248, .14) !important; border: 1px solid rgba(56, 189, 248, .6) !important; border-radius: .85rem !important; color: #38bdf8 !important; box-shadow: none !important; }
+.btn-follow-artist[data-following="true"] { background: rgba(34, 197, 94, .14) !important; border-color: rgba(34, 197, 94, .6) !important; color: #4ade80 !important; }
+.feed-follow-artist { background: rgba(56, 189, 248, .14) !important; border: 1px solid rgba(56, 189, 248, .65) !important; border-radius: .65rem !important; color: #38bdf8 !important; box-shadow: none !important; font-family: inherit !important; font-size: .7rem !important; font-weight: 700 !important; padding: .2rem .5rem !important; }
+.feed-follow-artist[data-following="true"] { background: rgba(34, 197, 94, .14) !important; border-color: rgba(34, 197, 94, .65) !important; color: #4ade80 !important; }
+.btn-carrito, .artist-cart-button { background: rgba(34, 197, 94, .16) !important; border: 1px solid rgba(34, 197, 94, .65) !important; border-radius: .85rem !important; color: #4ade80 !important; box-shadow: none !important; font-family: inherit !important; font-size: .85rem !important; font-weight: 700 !important; line-height: 1.2 !important; }
+.btn-carrito:hover:not(:disabled), .artist-cart-button:hover:not(:disabled) { background: rgba(34, 197, 94, .28) !important; border-color: #4ade80 !important; color: #86efac !important; transform: translateY(-1px); }
+.btn-carrito.cart-added, .artist-cart-button.cart-added, .artist-work-action.cart-added { background: rgba(34, 197, 94, .16) !important; border-color: rgba(34, 197, 94, .65) !important; color: #4ade80 !important; }
+.btn-like[aria-pressed="true"] { background: rgba(244, 63, 94, .16) !important; border-color: rgba(244, 63, 94, .7) !important; color: #fb7185 !important; }
+.btn-like[aria-pressed="true"]:hover { background: rgba(244, 63, 94, .28) !important; border-color: #fb7185 !important; color: #fda4af !important; }
+.feed-post-card:not(:has(.btn-seguir-artista-feed)) [onclick^="abrirModalReporteCliente"] { display: none !important; }
+.availability-badge { display: inline-flex; align-items: center; width: fit-content; margin: 0 0 0 .6rem; padding: .3rem .7rem; border: 1px solid; border-radius: 999px; vertical-align: middle; font-size: .75rem; font-weight: 700; }
+.availability-available { color: #4ade80; border-color: rgba(34, 197, 94, .55); background: rgba(34, 197, 94, .14); }
+.availability-reserved { color: #facc15; border-color: rgba(234, 179, 8, .55); background: rgba(234, 179, 8, .14); }
+.availability-sold { color: #f87171; border-color: rgba(239, 68, 68, .55); background: rgba(239, 68, 68, .14); }
+.availability-unavailable { color: #cbd5e1; border-color: rgba(148, 163, 184, .55); background: rgba(148, 163, 184, .14); }
+.catalogo-page { max-width: 1280px !important; }
+.catalogo-heading { background: var(--bg-surface) !important; color: var(--text-main) !important; border-color: var(--border-subtle) !important; padding: 1.75rem 2rem !important; box-shadow: 0 12px 28px rgba(60, 25, 12, .18); }
+.catalogo-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 320px)) !important; justify-content: center; gap: 1.5rem !important; }
+.catalogo-card { width: 100%; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; box-shadow: 0 8px 22px rgba(60, 25, 12, .14); }
+.catalogo-card:hover { transform: translateY(-5px); border-color: var(--brand-orange) !important; box-shadow: 0 14px 30px rgba(60, 25, 12, .24); }
+.catalogo-card > div:first-child { height: 230px !important; }
+.message-send { background: rgba(237, 119, 69, .18) !important; border: 1px solid rgba(237, 119, 69, .6) !important; color: #ff9d73 !important; border-radius: .85rem !important; box-shadow: none !important; }
+.message-send:hover:not(:disabled) { background: rgba(237, 119, 69, .28) !important; border-color: #ff9d73 !important; color: #ffc0a6 !important; filter: none; }
+
+/* Modales de reporte: misma apariencia que "Publicar Nueva Obra". */
+#modalReporteCliente,
+#modalReporteFeed,
+#modal-reporte-obra,
+.artist-report-overlay {
+    background: rgba(24, 10, 8, .72) !important;
+    backdrop-filter: blur(7px) !important;
+}
+
+#modalReporteCliente .modal-report-content,
+#modalReporteCliente .modal-content-box,
+#modalReporteFeed > form,
+#modal-reporte-obra .reporte-modal__form,
+.artist-report-overlay .artist-report-form {
+    width: min(540px, 100%) !important;
+    max-width: 540px !important;
+    box-sizing: border-box !important;
+    max-height: calc(100vh - 2rem) !important;
+    overflow-y: auto !important;
+    padding: 1.1rem 1.25rem !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 1rem !important;
+    background: var(--bg-surface) !important;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .42) !important;
+    color: var(--text-main) !important;
+}
+
+#modalReporteCliente .modal-report-content > div:first-child,
+#modalReporteCliente .modal-content-box > div:first-child {
+    padding-bottom: 1rem !important;
+    margin-bottom: 1rem !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+}
+
+#modalReporteCliente h3,
+#modalReporteCliente h2,
+#modalReporteFeed h2,
+#modal-reporte-obra h2,
+.artist-report-overlay h2 {
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+    color: var(--text-main) !important;
+}
+
+#modalReporteClient .reason-option,
+#modalReporteCliente .reason-option,
+#modalReporteFeed .reporte-option-global,
+#modal-reporte-obra .reporte-option,
+.artist-report-overlay .reporte-option-global {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+    box-sizing: border-box !important;
+    margin: .25rem 0 !important;
+    padding: .5rem .9rem !important;
+    border: 1px solid rgba(237, 119, 69, .55) !important;
+    border-radius: .7rem !important;
+    background: rgba(44, 20, 11, .72) !important;
+    color: var(--text-main) !important;
+    transition: transform .2s ease, background .2s ease, border-color .2s ease !important;
+}
+
+#modalReporteCliente .reason-option:hover,
+#modalReporteFeed .reporte-option-global:hover,
+#modal-reporte-obra .reporte-option:hover,
+.artist-report-overlay .reporte-option-global:hover {
+    transform: translateY(-2px);
+    border-color: var(--brand-orange) !important;
+    background: rgba(237, 119, 69, .17) !important;
+}
+
+#modalReporteCliente .reason-option:has(input:checked),
+#modalReporteFeed .reporte-option-global:has(input:checked),
+#modal-reporte-obra .reporte-option:has(input:checked),
+.artist-report-overlay .reporte-option-global:has(input:checked) {
+    border-color: var(--brand-orange) !important;
+    box-shadow: inset 0 0 0 1px var(--brand-orange) !important;
+}
+
+#modalReporteCliente form > div[style*="flex-direction"],
+#modalReporteFeed .reporte-options-global,
+#modal-reporte-obra .reporte-options,
+.artist-report-overlay .reporte-options-global {
+    gap: .25rem !important;
+    margin-bottom: .8rem !important;
+}
+
+#modalReporteCliente .reason-option strong,
+#modalReporteFeed .reporte-option-global strong,
+#modal-reporte-obra .reporte-option strong,
+.artist-report-overlay .reporte-option-global strong {
+    font-size: .9rem !important;
+    color: var(--text-main) !important;
+}
+
+#modalReporteCliente .reason-option span,
+#modalReporteFeed .reporte-option-global span,
+#modal-reporte-obra .reporte-option span,
+.artist-report-overlay .reporte-option-global span {
+    margin-top: .2rem !important;
+    font-size: .75rem !important;
+    color: var(--text-muted) !important;
+}
+
+#modalReporteCliente .client-modal-close,
+#modalReporteCliente .modal-content-box > div:first-child button,
+#modalReporteFeed button[aria-label="Cerrar"],
+#modal-reporte-obra .reporte-modal__close,
+.artist-report-overlay button[aria-label="Cerrar"] {
+    border: 0 !important;
+    background: transparent !important;
+    color: var(--text-muted) !important;
+    font-size: 2rem !important;
+    line-height: 1 !important;
+}
+
+#modalReporteCliente .client-modal-submit,
+#modalReporteFeed form button[type="submit"],
+#modal-reporte-obra .reporte-modal__actions button[type="submit"],
+.artist-report-overlay button[type="submit"] {
+    background: rgba(239, 68, 68, .14) !important;
+    border: 1px solid rgba(239, 68, 68, .55) !important;
+    color: #f87171 !important;
+}
+
+
+.btn-primary:hover:not(:disabled),
+.btn-outline:hover:not(:disabled),
+.btn-green:hover:not(:disabled),
+.btn-rose:hover:not(:disabled),
+.btn-sky:hover:not(:disabled),
+.btn-danger:hover:not(:disabled),
+.btn-neutral:hover:not(:disabled),
+.btn-purple:hover:not(:disabled) {
+    filter: brightness(1.2);
+    transform: translateY(-1px);
+}

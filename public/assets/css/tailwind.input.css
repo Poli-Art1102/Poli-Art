@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@import "tailwindcss";
+
+@source "../../../app/admin";
+@source "../../../app/artista";
+@source "../../../app/cliente";
+@source "../../../app/inicio";
+@source "../../../app/registro";
+@source "../../../app/includes/*.php";
+@source "../../../public/assets/js";
+@source inline("bg-brand bg-brand-dark bg-brand-light text-brand text-brand-dark text-brand-light shadow-brand/30");
+
+@theme {
+  --color-brand: #FF6D00;
+  --color-brand-dark: #E65100;
+  --color-brand-light: #FFF3E0;
+}
+
+@custom-variant dark (&:where(body.theme-dark, body.theme-dark *, .dark, .dark *));

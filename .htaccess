@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /poliart/
+
+# The root front controller dispatches the modular application.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(admin|artista|cliente|auth|inicio)/?$ index.php?module=$1 [QSA,L]

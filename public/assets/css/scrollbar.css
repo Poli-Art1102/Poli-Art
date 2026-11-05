@@ -1,0 +1,71 @@
+/* Barra de desplazamiento consistente en toda la interfaz. */
+html { scrollbar-width: auto; scrollbar-color: #b84f25 #8d2d0d; }
+*, *::before, *::after { scrollbar-color: #b84f25 #8d2d0d; }
+*::-webkit-scrollbar { width: 16px; height: 16px; }
+*::-webkit-scrollbar-track { background: #8d2d0d; }
+*::-webkit-scrollbar-thumb { min-height: 40px; border: 3px solid #8d2d0d; border-radius: 8px; background: #b84f25; }
+*::-webkit-scrollbar-thumb:hover { background: #d26735; }
+*::-webkit-scrollbar-button { display: block; height: 16px; width: 16px; background-color: #9f3714; background-repeat: no-repeat; background-position: center; }
+*::-webkit-scrollbar-button:vertical:start { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23d98255' d='M5 2 0 8h10z'/%3E%3C/svg%3E"); }
+*::-webkit-scrollbar-button:vertical:end { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23d98255' d='m0 2 10 0-5 6z'/%3E%3C/svg%3E"); }
+html::-webkit-scrollbar { width: 16px; height: 16px; }
+html::-webkit-scrollbar-track { background: #8d2d0d; }
+html::-webkit-scrollbar-thumb { min-height: 40px; border: 3px solid #8d2d0d; border-radius: 8px; background: #b84f25; background-clip: border-box; }
+html::-webkit-scrollbar-thumb:hover { background: #d26735; }
+html::-webkit-scrollbar-button { display: block; height: 16px; width: 16px; background-color: #9f3714; background-repeat: no-repeat; background-position: center; }
+html::-webkit-scrollbar-button:vertical:start { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23d98255' d='M5 2 0 8h10z'/%3E%3C/svg%3E"); }
+html::-webkit-scrollbar-button:vertical:end { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23d98255' d='m0 2 10 0-5 6z'/%3E%3C/svg%3E"); }
+
+/* Igual que artista/index.php: navbar fijo, sidebar y contenido independientes. */
+html, body { height: 100%; max-height: 100vh; overflow: hidden; }
+body > main { height: calc(100vh - 4.25rem); min-height: 0; overflow: hidden; flex: 1 1 auto !important; }
+body > main > *:not(.fixed-sidebar-container) { min-width: 0; min-height: 0; height: 100%; overflow-y: auto; overflow-x: hidden; box-sizing: border-box; }
+
+
+/* Las vistas de catálogo muestran la obra completa sin recortarla. */
+.catalogo-card > div:first-child {
+    height: auto !important;
+    min-height: 220px;
+    max-height: none !important;
+}
+
+.catalogo-card > div:first-child img {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 70vh;
+    object-fit: contain !important;
+}
+
+.artwork-bento-image {
+    aspect-ratio: auto !important;
+    height: auto !important;
+    min-height: 280px;
+}
+
+.artwork-bento-image > div {
+    height: auto !important;
+    min-height: 280px;
+    max-height: none !important;
+}
+
+.artwork-bento-card img {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 70vh;
+    object-fit: contain !important;
+}
+
+.feed-image-box > div {
+    height: auto !important;
+    max-height: none !important;
+}
+
+.feed-image-box img {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    max-height: calc(100vh - 15rem);
+    object-fit: contain !important;
+}
